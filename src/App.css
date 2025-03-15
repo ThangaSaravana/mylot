@@ -1,38 +1,178 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  /* Responsive adjustments */
+  .jar-container {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .jar-image {
+    width: 80% !important;
+    max-width: 400px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .table-container {
+    padding: 0 10px;
   }
-}
+
+  .team-header {
+    min-width: 60px;
+    font-size: 0.8rem;
+    padding: 8px 4px !important;
+    cursor: pointer;
+  }
+
+  .shuffle-btn {
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .jar-container {
+      height: 70vh;
+    }
+    
+    .team-header {
+      min-width: 100px;
+      font-size: 1rem;
+      padding: 12px 8px !important;
+    }
+
+    .jar-image {
+      width: 60% !important;
+    }
+
+    .shuffle-btn {
+      width: 150px;
+      height: 50px;
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    h1, h3 {
+      font-size: 1.5rem;
+    }
+    
+    .balls-container {
+      width: 25% !important;
+      bottom: 18% !important;
+    }
+  }
+
+  .result-mobile {
+    border-radius: 10px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 15px;
+  }
+
+  /* Desktop Result Styling */
+  .result-desktop {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .jar-container {
+      margin-bottom: 20px;
+    }
+  }
+
+  .green {
+    filter: hue-rotate(0deg);
+  }
+  .violet{
+    filter: hue-rotate(75deg);
+  }
+  .pink{
+    filter: hue-rotate(150deg);
+  }
+  .red{
+    filter: hue-rotate(225deg);
+  }
+  .orange{
+    filter: hue-rotate(300deg);
+  }
+  .lightgreen{
+    filter: hue-rotate(375deg);
+  }
+
+
+  .table-container {
+    padding: 0 5px;
+  }
+  
+  .header-content, .coach-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+  
+  .team-logo, .coach-logo {
+    width: 20px !important;
+    height: 20px !important;
+    max-width: 20px !important;
+  }
+  
+  .team-name, .coach-name {
+    font-size: 0.75rem;
+    white-space: nowrap;
+    position: static;
+    left: 0;
+  }
+  
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
+    .team-name, .coach-name {
+      font-size: 0.9rem;
+    }
+    
+    .team-logo, .coach-logo {
+      width: 25px !important;
+      height: 25px !important;
+    }
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    .team-name, .coach-name {
+      font-size: 1rem;
+    }}
+
+
+
+
+    .result-mobile {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      }
+      
+      .team-btn {
+        transition: transform 0.2s;
+      }
+      
+      .team-btn:active {
+        transform: scale(0.95);
+      }
+      
+      @media (max-width: 375px) {
+        .team-btn {
+          width: 35px !important;
+          height: 35px !important;
+          font-size: 0.6rem !important;
+        }
+        
+        .text-white {
+          font-size: 0.8rem !important;
+        }
+      }
